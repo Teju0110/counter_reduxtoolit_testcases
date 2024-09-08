@@ -5,18 +5,18 @@ describe('counterSlice Reducer', () => {
     value: 0,
   };
 
-  it('should handle initial state', () => {
+  test('should handle initial state', () => {
     expect(counterReducer(undefined, { type: 'unknown' })).toEqual(
       initialState
     );
   });
 
-  it('should handle increament', () => {
+  test('should handle increament', () => {
     const actual = counterReducer(initialState, increment());
     expect(actual.value).toEqual(1);
   });
 
-  it('should handle decreament', () => {
+  test('should handle decreament', () => {
     const actual = counterReducer(initialState, decrement());
     expect(actual.value).toEqual(-1);
   });
